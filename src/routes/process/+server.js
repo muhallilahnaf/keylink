@@ -263,5 +263,5 @@ export const POST = async ({request}) => {
 
 
 export const config = {
-    runtime: 'edge'
+    runtime: 'nodejs18.x'
 };
