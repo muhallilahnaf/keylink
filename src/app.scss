@@ -1,0 +1,120 @@
+/* Write your global styles here, in SCSS syntax. Variables and mixins from the src/variables.scss file are available here without importing */
+
+body {
+    height: $body-height-min !important;
+    width: $body-width-min !important;
+    box-sizing: border-box !important;
+    font-size: $font-smaller !important;
+    background-color: $light !important;
+    // color: $primary !important;
+}
+
+input[type=text], textarea {
+    font-size: $font-smaller !important;
+}
+
+::-webkit-scrollbar {
+    width: $scrollbar-width;
+}
+
+::-webkit-scrollbar-track {
+    background: $tertiary;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba($color: $secondary, $alpha: 0.8);
+
+    &:hover {
+        background: $secondary;
+    }
+}
+
+#project-name::placeholder {
+    color: $secondary !important;
+}
+
+#project-name:-ms-input-placeholder {
+    color: $secondary !important;
+}
+
+@media only screen and (min-width: $body-width-min) {
+    body {
+        height: $body-height-max !important;
+        width: $body-width-max !important;
+    }
+}
+
+textarea {
+    resize: none !important;
+}
+
+#keyword-section .selected {
+    background-color: $secondary !important;
+}
+
+.keyword {
+    font-size: $font-smaller !important;
+    &:not(.collapsed) {
+        background-color: $secondary !important;
+    }
+    &:hover {
+        background-color: $secondary !important;
+    }
+}
+
+#toast {
+    display: none;
+    transition: display 1s;
+}
+
+.chunk:hover {
+    background-color: $secondary !important;
+}
+
+.btn-outline-secondary:hover {
+    color: $dark !important;
+}
+
+#copy-lsi:hover {
+    background-color: $secondary !important;
+}
+
+.spinner-border {
+    display: none !important;
+}
+
+
+/* Import only what you need from Bootstrap */
+@import 'bootstrap/scss/root';
+@import 'bootstrap/scss/reboot';
+@import 'bootstrap/scss/type';
+@import 'bootstrap/scss/images';
+@import 'bootstrap/scss/containers';
+@import 'bootstrap/scss/grid';
+@import 'bootstrap/scss/tables';
+@import 'bootstrap/scss/forms';
+@import 'bootstrap/scss/buttons';
+@import 'bootstrap/scss/transitions';
+// @import 'bootstrap/scss/dropdown';
+// @import 'bootstrap/scss/button-group';
+@import 'bootstrap/scss/nav';
+@import 'bootstrap/scss/navbar';
+@import 'bootstrap/scss/card';
+@import 'bootstrap/scss/accordion';
+// @import 'bootstrap/scss/breadcrumb';
+// @import 'bootstrap/scss/pagination';
+@import 'bootstrap/scss/badge';
+@import 'bootstrap/scss/alert';
+// @import 'bootstrap/scss/progress';
+@import 'bootstrap/scss/list-group';
+@import 'bootstrap/scss/close';
+@import 'bootstrap/scss/toasts';
+@import 'bootstrap/scss/modal';
+// @import 'bootstrap/scss/tooltip';
+// @import 'bootstrap/scss/popover';
+// @import 'bootstrap/scss/carousel';
+@import 'bootstrap/scss/spinners';
+// @import 'bootstrap/scss/offcanvas';
+@import 'bootstrap/scss/placeholders';
+@import 'bootstrap/scss/helpers';
+@import 'bootstrap/scss/utilities/api';

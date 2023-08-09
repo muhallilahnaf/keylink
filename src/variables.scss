@@ -1,0 +1,38 @@
+/* Variables and mixins declared here will be available in all other SCSS files */
+
+$font-smaller: 14px;
+$scrollbar-width: 8px;
+$body-height-min: 768px;
+$body-width-min: 1366px;
+$body-height-max: 100vh;
+$body-width-max: 100%;
+
+@import 'bootstrap/scss/functions';
+
+/* Override Bootstrap's variables here */
+
+$brand: #112D4E;
+$primary: #3F72AF;
+$secondary: #9CB5D3;
+$tertiary: #EAEDF3;
+$light: #F9F7F7;
+
+$success: #1DB954;
+$warning: #FFB84C;
+$danger: #DC3545;
+
+@import 'bootstrap/scss/variables';
+@import "bootstrap/scss/variables-dark";
+
+/* override theme-color maps */
+
+$custom-colors: (
+    "tertiary": $tertiary,
+    "brand": $brand
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+@import 'bootstrap/scss/maps';
+@import 'bootstrap/scss/mixins';
+@import 'bootstrap/scss/utilities';
